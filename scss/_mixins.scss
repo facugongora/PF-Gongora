@@ -1,0 +1,54 @@
+//extexnds
+.titulos{
+    font-family: $mainFont;
+    font-size: $fontXL;
+    font-weight: $fontBold;
+    align-items: center;
+    width: 100%;
+}
+
+.titulosBlancos{
+    @extend .titulos;
+    color: $secondaryColor;
+    
+}
+
+.titulosAmarillos{
+    @extend .titulos;
+    color: $mainColor;
+}
+
+//mixins
+@mixin textos ($color,$size,$weight,$padding){
+    font-family: $mainFont;
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    padding: $padding;
+}
+
+
+@mixin button ($size,$weight,$width,$margin,$justify,$align){
+    background-color: $mainColor;
+    color: $terciaryColor;
+    border: none;
+    border-radius: 5px;
+    font-family: $mainFont;
+    font-size: $size;
+    font-weight: $weight;
+    width: $width;
+    margin: $margin;
+    justify-content: $justify;
+    align-items: $align;
+    &:hover{
+        transform: scale(1.02);
+        transition: all 1.03s;
+        cursor: pointer;
+    }
+}
+
+
+@mixin socials (){
+    width: 30px;
+}
+

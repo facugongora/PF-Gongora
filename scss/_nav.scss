@@ -1,0 +1,70 @@
+nav{
+    div{
+        a{
+            font-family: $mainFont;
+            color: $mainColor;
+            font-size: $fontMD;
+            font-weight: $fontNormal;
+            .nav__logo{
+                width: 200px;
+                @media (min-width: 576px) and (max-width:768px){
+                    width: 150px;
+                }
+                @media (max-width: 576px){
+                    width: 150px;
+                }
+
+            }
+        }
+        .btnBurguer{
+            width: 50px;
+        }
+        }
+        div{
+            ul{
+                li{
+                    text-decoration: none;
+                    .navBar{
+                        font-family: $mainFont;
+                        color: $mainColor;
+                        font-size: $fontMD;
+                        font-weight: $fontNormal; 
+                        margin: 0 30px;
+                        &:hover{
+                            color: $mainColor;
+                            transform: scale(1.02);
+                            transition: all 1.03s;
+                            cursor: pointer;
+                        }
+                    }
+                    .desplegable{
+                        background-color: $terciaryColor;
+                        li{
+                            background-color: $terciaryColor;
+                            color: $mainColor;
+                            a{
+                                font-family: $mainFont;
+                                color: $mainColor;
+                                font-size: $fontMD;
+                                font-weight: $fontNormal;
+                                text-decoration: none;
+                                &:hover{
+                                    background-color: transparent;
+                                }
+                            }
+                            &:hover{
+                                background-color: $terciaryColor;
+                                transform: scale(1.02);
+                                transition: all 1.03s;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .navCart{
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+

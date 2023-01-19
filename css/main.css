@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+p {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(232, 234, 235);
+  font-size: 1.25rem;
+}
+
+nav div a {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(221, 255, 13);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+nav div a .nav__logo {
+  width: 200px;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  nav div a .nav__logo {
+    width: 150px;
+  }
+}
+@media (max-width: 576px) {
+  nav div a .nav__logo {
+    width: 150px;
+  }
+}
+nav div .btnBurguer {
+  width: 50px;
+}
+nav div ul li {
+  text-decoration: none;
+}
+nav div ul li .navBar {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(221, 255, 13);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 30px;
+}
+nav div ul li .navBar:hover {
+  color: rgb(221, 255, 13);
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
+}
+nav div ul li .desplegable {
+  background-color: rgb(37, 37, 37);
+}
+nav div ul li .desplegable li {
+  background-color: rgb(37, 37, 37);
+  color: rgb(221, 255, 13);
+}
+nav div ul li .desplegable li a {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(221, 255, 13);
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav div ul li .desplegable li a:hover {
+  background-color: transparent;
+}
+nav div ul li .desplegable li:hover {
+  background-color: rgb(37, 37, 37);
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
+}
+nav div ul li .navCart {
+  width: 40px;
+}
+
+.titulos, .titulosAmarillos, .titulosBlancos {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  align-items: center;
+  width: 100%;
+}
+
+.titulosBlancos {
+  color: rgb(232, 234, 235);
+}
+
+.titulosAmarillos {
+  color: rgb(221, 255, 13);
+}
+
+footer .sectionNewsletter {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(37, 37, 37);
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+footer .sectionNewsletter h2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(232, 234, 235);
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 0;
+}
+footer .sectionNewsletter h3 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(232, 234, 235);
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 0;
+}
+footer .sectionNewsletter form {
+  margin-bottom: 10px;
+}
+footer .sectionNewsletter form div {
+  width: 100%;
+}
+footer .sectionNewsletter form div input.relleno {
+  height: 20px;
+}
+footer .sectionNewsletter form div label {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(232, 234, 235);
+  font-size: 1rem;
+  font-weight: 1.25rem;
+  padding: 0px;
+}
+footer .sectionNewsletter form button {
+  background-color: rgb(221, 255, 13);
+  color: rgb(37, 37, 37);
+  border: none;
+  border-radius: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+footer .sectionNewsletter form button:hover {
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
+}
+footer .sectionSocials {
+  background-color: rgb(29, 29, 29);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .sectionSocials article .navFooter {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+}
+footer .sectionSocials article .navFooter li {
+  margin: 0 50px;
+}
+footer .sectionSocials article .navFooter li a {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(232, 234, 235);
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 0;
+  text-decoration: none;
+}
+footer .sectionSocials article.socialsFooter ul li a img {
+  width: 30px;
+  margin: 0 50px;
+}
+
+.fondo {
+  height: 100vh;
+}
+
+body {
+  background-image: url(../img/fondo.png);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main div {
+  display: flex;
+}
+main div .titulosAmarillos {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  align-items: center;
+  width: 100%;
+}
+main article {
+  display: flex;
+}
+main article section {
+  display: flex;
+}
+main article section div {
+  display: flex;
+  flex-direction: column;
+}
+main article section div img {
+  border: none;
+}
+main article section div h5 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(37, 37, 37);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+main article section div p {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(37, 37, 37);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+main article section div button {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(221, 255, 13);
+  color: rgb(37, 37, 37);
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+main article section div button:hover {
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
+}
+
+#nosotros p {
+  width: 80%;
+  text-align: center;
+}
+
+#contacto section {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #contacto section {
+    margin: 0 50px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  #contacto section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  #contacto section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#contacto section article ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+#contacto section article li {
+  margin: 10px 0;
+}
+#contacto section article li h3 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(232, 234, 235);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+}
+
+#tucarrito section {
+  display: flex;
+  flex-direction: column;
+}
+#tucarrito section .compra {
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#tucarrito section .compra img {
+  width: 30px;
+  margin-right: 50px;
+}
+#tucarrito section .compra h3 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(232, 234, 235);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+}
+#tucarrito section .compra button {
+  background-color: rgb(221, 255, 13);
+  color: rgb(37, 37, 37);
+  border: none;
+  border-radius: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 300px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+#tucarrito section .compra button:hover {
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
