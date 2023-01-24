@@ -18,6 +18,8 @@
     color: $mainColor;
 }
 
+
+
 //mixins
 @mixin textos ($color,$size,$weight,$padding){
     font-family: $mainFont;
@@ -31,6 +33,25 @@
 @mixin button ($size,$weight,$width,$margin,$justify,$align){
     background-color: $mainColor;
     color: $terciaryColor;
+    border: none;
+    border-radius: 5px;
+    font-family: $mainFont;
+    font-size: $size;
+    font-weight: $weight;
+    width: $width;
+    margin: $margin;
+    justify-content: $justify;
+    align-items: $align;
+    &:hover{
+        transform: scale(1.02);
+        transition: all 1.03s;
+        cursor: pointer;
+    }
+}
+
+@mixin secondaryButton ($size,$weight,$width,$margin,$justify,$align){
+    background-color: $quaternaryColor;
+    color: $mainColor;
     border: none;
     border-radius: 5px;
     font-family: $mainFont;

@@ -14,7 +14,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-active-color ">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../index.html">
           <img class="nav__logo" src="../img/logo.png" alt="Logo lacestennis">
         </a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,25 +64,25 @@
 
 
     <main id="contacto">
+
       <section>
         <h2 class="py-5 titulosBlancos text-center ">
           CONTACTO
         </h2>
       </section>
 
-      <section>
-
-        <article >
+      <section class="datos">
+        <article>
           <ul>
             <li>
               <img src="../img/phone.png" alt="Nuestro teléfono de contacto">
             </li>
             <li>
-              <h3 class="info ">+54 9 351 7074568</h3>
+              <h3 ">+54 9 351 7074568</h3>
             </li>
           </ul>
-
         </article>
+
         <article >
           <ul>
             <li>
@@ -94,7 +94,7 @@
           </ul>
         </article>
 
-        <article >
+        <article>
           <ul>
             <li>
               <img src="../img/location.png" alt="Nuestra ubicación">   
@@ -104,10 +104,33 @@
             </li>
           </ul>
         </article>
-
+        
       </section>
 
+      <section class="mensaje">
+        <article class="intro">
+          <h3>Envianos tu duda...</h2>
+        </article>
+        <article class="input">
+          <input placeholder="Nombre" type="text">
+        </article>
 
+        <article class="input">
+          <input placeholder="Email"  type="email">
+        </article>
+
+        <article class="input">
+          <input placeholder="Teléfono"  type="tel">
+        </article>
+
+        <article class="input">
+          <input class="textarea" placeholder="Tu mensaje, duda, o solicitud" name="msj" type="text">
+        </article>
+
+        <article>
+          <button>Enviar</button>
+        </article>
+      </section>
     </main>
 
 
@@ -116,7 +139,7 @@
 
 
     <footer class=" mt-5">
-      <section class="col-sm-12 col-md-12 col-lg-12 sectionNewsletter fondo">
+      <section class="col-sm-12 col-md-12 col-lg-12 sectionNewsletter ">
               <h2 class="font__bold">SUSCRÍBETE A LA NEWSLETTER</h2>
               <h3 class="font__semibold">Suscríbete a nuestra newsletter de contenidos y recibe información actualizada.</h3>
 
@@ -134,56 +157,62 @@
                   </div>
                   <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label font__semibold" for="exampleCheck1">Quiero recibir las newsletters comerciales perfiladas de Lacestennis</label>
+                    <label for="exampleCheck1">Quiero recibir las newsletters comerciales perfiladas de Lacestennis</label>
                   </div>
                   <button type="submit" class="">Suscribirme</button>
               </form>
       </section>
-      <section class="sectionSocials">
-        <article>
-          <ul class="navFooter ">
-            <li>
-              <a href="./index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="../pages/calzado.html">Calzado</a>
-            </li>
-            <li>
-              <a href="../pages/accesorios.html">Accesorios</a>
-            </li>
-            <li>
-              <a href="../pages/nosotros.html">Nosotros</a>
-            </li>
-            <li>
-              <a href="../pages/contacto.html">Contacto</a>
-            </li>
-            <li>
-              <a href="../pages/carrito.html">Tu carrito</a>
-            </li>
-          </ul>
+      <section class="sectionFooter">
+        <article class="pagesFooter">
+          <div>
+            <ul class="navFooter">
+              <li>
+                <a href="../index.html">Inicio</a>
+              </li>
+              <li>
+                <a href="../pages/calzado.html">Calzado</a>
+              </li>
+              <li>
+                <a href="../pages/accesorios.html">Accesorios</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="navFooter">
+              <li>
+                <a href="../pages/nosotros.html">Nosotros</a>
+              </li>
+              <li>
+                <a href="../pages/contacto.html">Contacto</a>
+              </li>
+              <li>
+                <a href="../pages/carrito.html">Tu carrito</a>
+              </li>
+            </ul>
+          </div>
         </article>
-        <article class="socialsFooter">
-          <ul class="nav d-flex justify-content-center ">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="https://www.facebook.com/" target="_blank">
-                  <img class="footer__logo" src="../img/fb.svg" class="img-fluid" alt="seguinos en facebook">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.instagram.com/" target="_blank">
-                  <img class="footer__logo" src="../img/ig.svg" class="img-fluid" alt="seguinos en instagram">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.tiktok.com/" target="_blank">
-                  <img class="footer__logo" src="../img/tiktok.png" class="img-fluid" alt="seguinos en tiktok">
-                </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="https://twitter.com/" target="_blank">
-                  <img class="footer__logo" src="../img/tw.png" class="img-fluid" alt="seguinos en twitter">
-                </a>
-              </li>
+          <article class="socialsFooter">
+            <ul>
+                <li>
+                  <a aria-current="page" href="https://www.facebook.com/" target="_blank">
+                    <img src="../img/fb.png"  alt="seguinos en facebook">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <img src="../img/ig.png"  alt="seguinos en instagram">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/" target="_blank">
+                    <img  src="../img/tiktok.png"  alt="seguinos en tiktok">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" target="_blank">
+                    <img src="../img/tw.png" alt="seguinos en twitter">
+                  </a>
+                </li>
             </ul>
           </article>  
       </section>

@@ -7,11 +7,10 @@
 @import "_footer";
 
 body{
-    background-image: url(../img/fondo.png);
+    background-image: url(../img/fondo.webp);
 }
 
-
-main{
+#main{
     display: $flex;
     flex-direction: column;
     justify-content: center;
@@ -71,18 +70,77 @@ main{
     }
 }
 
+#calzado{
+    article{
+        section{
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                h5{
+                    @include textos ($terciaryColor,$fontXS,$fontNormal,0)
+                }
+                p{
+                    @include textos ($terciaryColor,$fontXS,$fontNormal,0)
+                }
+                button{
+                    @include textos ($terciaryColor,$fontS,$fontNormal,0);
+                    @include button ($fontS,$fontNormal,0,0,center,center);
+                    text-decoration: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#accesorios{
+    article{
+        section{
+            .accesorios{
+                h5{
+                    @include textos ($terciaryColor,$fontS,$fontNormal,0)
+                }
+                p{
+                    @include textos ($terciaryColor,$fontS,$fontNormal,0)
+                }
+                a{
+                    @include textos ($terciaryColor,$fontS,$fontNormal,0);
+                    @include button ($fontS,$fontNormal,0,0,center,center);
+                    text-decoration: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 
 #nosotros{
-    p{
-        width: 80%;
-        text-align: center;
+    section{
+        p{
+            text-align: center;
+            padding: 0 150px;
+            @media (max-width:576px) {
+                padding: 0 50px;
+            }
+            @media (max-width:768px){
+                padding: 0 100px;
+            }
+
+        }
     }
 }
 
 
 #contacto{
-    section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .datos{
         display: flex;
+        align-items: center;
         justify-content: space-between;
         width: 70%;
         @media (min-width:768px) and (max-width: 992px) {
@@ -90,8 +148,8 @@ main{
         }
         @media (min-width: 576px) and (max-width: 768px){
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         @media (max-width:576px){
             display: flex;
@@ -114,30 +172,325 @@ main{
             }
         }
     }
+    .mensaje{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $secondaryColor;
+        border-radius: 5px;
+        width: 70%;
+        padding: 20px;
+        margin-top: 50px;
+        
+        .intro{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            h3{
+                @include textos ($quaternaryColor,$fontMD,$fontBold,0);
+                text-transform: uppercase;
+            }
+            
+        }
+        .input{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            margin: 10px 0;
+            .textarea{
+                height: 200px; 
+            }
+            input{
+                border-radius: 5px;
+                width: 100% ;
+                border: 1px solid $quaternaryColor;
+            }
+            @media (max-width:992px){
+                width: 100%;
+            }
+        }
+        article{
+            width: 50%;
+            button{
+                @include secondaryButton ($fontMD,$fontNormal,0,0,center,center);
+                width: 100%;
+                margin-top: 10px;
+            }
+            @media (max-width:992px){
+                width: 100%;
+            }
+        }
+        @media (max-width:992px){
+            width: 90%;
+        }
+    }
 }
 
 
 #tucarrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     section{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 60%;
+        @media (max-width:992px){
+            width: 90%;
+        }
         .compra{
-            background-color: $quaternaryColor;
+            background-color: $secondaryColor;
+            border-radius: 5px;
+            padding: 20px;
+            width: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content:space-around;
             img{
-                width: 30px;
+                width: 35px;
                 margin-right: 50px;
+
+                @media (max-width:992px){
+                    margin: 0;
+                }
             }
             h3{
-                @include textos ($secondaryColor,$fontMD,$fontNormal,0)
+                @include textos ($quaternaryColor,$fontMD,$fontNormal,0);
+
+                @media (max-width:992px){
+                    margin: 20px 0;
+                }
             }
             button{
-                @include button ($fontMD,$fontNormal,300px,5px,center,center);
+                @include secondaryButton ($fontMD,$fontNormal,300px,5px,center,center);
                 margin-left: 50px;
+
+                @media (max-width:992px){
+                    width: 100%;
+                    margin: 0;
+                }
                 
             }
+
+            @media (max-width:992px){
+                flex-direction: column;
+                align-items: center;
+            }
+            
         }
-    }
-}
+        .detalles{
+            display: grid;
+            grid-template-areas: 
+                "img . . . ."
+                "img pro pre can sub"
+                "img pro2 pre2 can2 sub2"
+                "img . . . ."
+            ;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            background-color: $secondaryColor;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+
+            @media (max-width:992px){
+                grid-template-areas: 
+                "img img"
+                "pro pro2"
+                "pre pre2"
+                "can can2"
+                "sub sub2";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 0.05fr 0.05fr 0.05fr 0.05fr;
+                padding: 20px;
+            }
+                    
+                .pro{
+                    @include textos ($quaternaryColor,$fontMD,$fontNormal,0);
+                    grid-area: pro;
+                    justify-self: center;
+                    align-self: center;
+                    margin-top: 20px;
+
+                    @media (max-width:992px){
+                        justify-self: start;
+                        margin-top: 20px;
+                    }
+                    
+                }
+                .pre{
+                    @include textos ($quaternaryColor,$fontMD,$fontNormal,0);
+                    grid-area: pre;
+                    justify-self: center;
+                    align-self: center;
+                    
+                    @media (max-width:992px){
+                        justify-self: start;
+                        margin-top: 20px;
+                    }
+                    
+                }
+                .can{
+                    @include textos ($quaternaryColor,$fontMD,$fontNormal,0);
+                    grid-area: can;
+                    justify-self: center;
+                    align-self: center;
+
+                    @media (max-width:992px){
+                        justify-self: start;
+                        margin-top: 20px;
+                    }
+                }
+                .sub{
+                    @include textos ($quaternaryColor,$fontMD,$fontNormal,0);
+                    grid-area: sub;
+                    justify-self: center;
+                    align-self: center;
+
+                    @media (max-width:992px){
+                        justify-self: start;
+                        margin-top: 20px;
+                    }
+                }
+                img{
+                    width: 300px;
+                    grid-area: img;
+                    border-radius: 5px;
+                    @media (max-width:992px){
+                        width: 50%;
+                        justify-self: center;
+                    }
+
+
+                }
+                .pro2{
+                    @include textos ($quaternaryColor,$fontMD,$fontLight,0);
+                    grid-area: pro2;
+                    justify-self: center;
+                    align-self: center;
+                    
+                    @media (max-width:992px){
+                        justify-self: end;
+                        margin-top: 20px;
+                    }
+                }
+                .pre2{
+                    @include textos ($quaternaryColor,$fontMD,$fontLight,0);
+                    grid-area: pre2;
+                    justify-self: center;
+                    align-self: center;
+
+                    @media (max-width:992px){
+                        justify-self: end;
+                        margin-top: 20px;
+                    }
+                }
+                .can2{
+                    @include textos ($quaternaryColor,$fontMD,$fontLight,0);
+                    grid-area: can2;
+                    justify-self: center;
+                    align-self: center;
+
+                    @media (max-width:992px){
+                        justify-self: end;
+                        margin-top: 20px;
+                    }
+                }
+                .sub2{
+                    @include textos ($quaternaryColor,$fontMD,$fontLight,0);
+                    grid-area: sub2;
+                    justify-self: center;
+                    align-self: center;
+
+                    @media (max-width:992px){
+                        justify-self: end;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        } 
+        .final{
+            padding: 20px 30px;
+            display: grid;
+            grid-template-areas: 
+                "cart cart cart cart cart"
+                "subt subt2 subt2 subt2 subt2"
+                "env env2 env2 env2 env2"
+                "tot tot2 tot2 tot2 tot2"
+                "btn btn btn btn btn"
+            ;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            background-color: $secondaryColor;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+
+                .cart{
+                    @include textos ($quaternaryColor,$fontXL,$fontBold,0);
+                    grid-area: cart;
+                    justify-self: center;
+                    align-self: center;
+
+                }
+                .subt{
+                    @include textos ($quaternaryColor,$fontMD,$fontNormal,0);
+                    grid-area: subt;
+                    justify-self: start;
+                    align-self: center;
+                
+                }
+                .env{
+                    @include textos ($quaternaryColor,$fontMD,$fontNormal,0);
+                    grid-area: env;
+                    justify-self: start;
+                    align-self: center;
+                
+                }
+                .tot{
+                    @include textos ($quaternaryColor,$fontMD,$fontNormal,0);
+                    grid-area: tot;
+                    justify-self: start;
+                    align-self: center;
+                
+                }
+                .env2{
+                    @include textos ($quaternaryColor,$fontMD,$fontLight,0);
+                    grid-area: env2;
+                    justify-self:end;
+                    align-self: center;
+
+                    @media (max-width:992px){
+                        width: 80%;
+                        text-align: right;
+                        flex-wrap: wrap;
+                    }
+                
+                }
+                .tot2{
+                    @include textos ($quaternaryColor,$fontMD,$fontLight,0);
+                    grid-area: tot2;
+                    justify-self: end;
+                    align-self: center;
+                
+                }
+                .subt2{
+                    @include textos ($quaternaryColor,$fontMD,$fontLight,0);
+                    grid-area: subt2;
+                    justify-self: end;
+                    align-self: center;
+                
+                }
+                button{
+                    @include secondaryButton($fontMD,$fontNormal,300px,5px,center,center);
+                    grid-area: btn;
+                    width: 100%;
+                }
+        }
+    }            

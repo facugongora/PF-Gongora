@@ -44,10 +44,10 @@ nav div ul li .navBar:hover {
   cursor: pointer;
 }
 nav div ul li .desplegable {
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(30, 30, 30);
 }
 nav div ul li .desplegable li {
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(30, 30, 30);
   color: rgb(221, 255, 13);
 }
 nav div ul li .desplegable li a {
@@ -61,7 +61,7 @@ nav div ul li .desplegable li a:hover {
   background-color: transparent;
 }
 nav div ul li .desplegable li:hover {
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(30, 30, 30);
   transform: scale(1.02);
   transition: all 1.03s;
   cursor: pointer;
@@ -89,7 +89,7 @@ nav div ul li .navCart {
 footer .sectionNewsletter {
   display: flex;
   flex-direction: column;
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(30, 30, 30);
   justify-content: center;
   align-items: center;
   padding: 50px;
@@ -105,7 +105,7 @@ footer .sectionNewsletter h3 {
   font-family: "Chakra Petch", sans-serif;
   color: rgb(232, 234, 235);
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 300;
   padding: 0;
 }
 footer .sectionNewsletter form {
@@ -126,7 +126,7 @@ footer .sectionNewsletter form div label {
 }
 footer .sectionNewsletter form button {
   background-color: rgb(221, 255, 13);
-  color: rgb(37, 37, 37);
+  color: rgb(30, 30, 30);
   border: none;
   border-radius: 5px;
   font-family: "Chakra Petch", sans-serif;
@@ -142,84 +142,107 @@ footer .sectionNewsletter form button:hover {
   transition: all 1.03s;
   cursor: pointer;
 }
-footer .sectionSocials {
-  background-color: rgb(29, 29, 29);
+footer .sectionFooter {
+  background-color: rgb(20, 20, 20);
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-footer .sectionSocials article .navFooter {
+footer .sectionFooter .pagesFooter {
+  display: flex;
+}
+footer .sectionFooter .pagesFooter .navFooter {
   list-style-type: none;
   text-decoration: none;
   display: flex;
 }
-footer .sectionSocials article .navFooter li {
+@media (max-width: 992px) {
+  footer .sectionFooter .pagesFooter .navFooter {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+footer .sectionFooter .pagesFooter li {
   margin: 0 50px;
 }
-footer .sectionSocials article .navFooter li a {
+footer .sectionFooter .pagesFooter a {
   font-family: "Chakra Petch", sans-serif;
   color: rgb(232, 234, 235);
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 300;
   padding: 0;
   text-decoration: none;
 }
-footer .sectionSocials article.socialsFooter ul li a img {
-  width: 30px;
-  margin: 0 50px;
-}
 
-.fondo {
-  height: 100vh;
+.socialsFooter {
+  margin: 20px 0 0 0;
+}
+.socialsFooter ul {
+  display: flex;
+  list-style: none;
+}
+.socialsFooter ul li a img {
+  width: 30px;
+  margin: 0 100px;
+}
+@media (max-width: 992px) {
+  .socialsFooter ul li a img {
+    margin: 0 50px;
+  }
+}
+@media (max-width: 576px) {
+  .socialsFooter ul li a img {
+    margin: 0 20px;
+  }
 }
 
 body {
-  background-image: url(../img/fondo.png);
+  background-image: url(../img/fondo.webp);
 }
 
-main {
+#main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main div {
+#main div {
   display: flex;
 }
-main div .titulosAmarillos {
+#main div .titulosAmarillos {
   font-family: "Chakra Petch", sans-serif;
   font-size: 1.75rem;
   font-weight: 800;
   align-items: center;
   width: 100%;
 }
-main article {
+#main article {
   display: flex;
 }
-main article section {
+#main article section {
   display: flex;
 }
-main article section div {
+#main article section div {
   display: flex;
   flex-direction: column;
 }
-main article section div img {
+#main article section div img {
   border: none;
 }
-main article section div h5 {
+#main article section div h5 {
   font-family: "Chakra Petch", sans-serif;
-  color: rgb(37, 37, 37);
+  color: rgb(30, 30, 30);
   font-size: 0.95rem;
   font-weight: 800;
 }
-main article section div p {
+#main article section div p {
   font-family: "Chakra Petch", sans-serif;
-  color: rgb(37, 37, 37);
+  color: rgb(30, 30, 30);
   font-size: 0.95rem;
   font-weight: 500;
 }
-main article section div button {
+#main article section div button {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -227,88 +250,291 @@ main article section div button {
   justify-content: center;
   align-items: center;
   background-color: rgb(221, 255, 13);
-  color: rgb(37, 37, 37);
+  color: rgb(30, 30, 30);
   border-radius: 5px;
   border: none;
   width: 100%;
 }
-main article section div button:hover {
+#main article section div button:hover {
   transform: scale(1.02);
   transition: all 1.03s;
   cursor: pointer;
 }
 
-#nosotros p {
-  width: 80%;
-  text-align: center;
+#calzado article section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#calzado article section div h5 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(30, 30, 30);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0;
+}
+#calzado article section div p {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(30, 30, 30);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0;
+}
+#calzado article section div button {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(30, 30, 30);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
+  background-color: rgb(221, 255, 13);
+  color: rgb(30, 30, 30);
+  border: none;
+  border-radius: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+}
+#calzado article section div button:hover {
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
 }
 
-#contacto section {
+#accesorios article section .accesorios h5 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(30, 30, 30);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
+}
+#accesorios article section .accesorios p {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(30, 30, 30);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
+}
+#accesorios article section .accesorios a {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(30, 30, 30);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
+  background-color: rgb(221, 255, 13);
+  color: rgb(30, 30, 30);
+  border: none;
+  border-radius: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+}
+#accesorios article section .accesorios a:hover {
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
+}
+
+#nosotros section p {
+  text-align: center;
+  padding: 0 150px;
+}
+@media (max-width: 576px) {
+  #nosotros section p {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  #nosotros section p {
+    padding: 0 100px;
+  }
+}
+
+#contacto {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contacto .datos {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 70%;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  #contacto section {
+  #contacto .datos {
     margin: 0 50px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  #contacto section {
+  #contacto .datos {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 @media (max-width: 576px) {
-  #contacto section {
+  #contacto .datos {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-#contacto section article ul {
+#contacto .datos article ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   list-style: none;
 }
-#contacto section article li {
+#contacto .datos article li {
   margin: 10px 0;
 }
-#contacto section article li h3 {
+#contacto .datos article li h3 {
   font-family: "Chakra Petch", sans-serif;
   color: rgb(232, 234, 235);
   font-size: 1.25rem;
   font-weight: 500;
   padding: 0;
 }
+#contacto .mensaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(232, 234, 235);
+  border-radius: 5px;
+  width: 70%;
+  padding: 20px;
+  margin-top: 50px;
+}
+#contacto .mensaje .intro {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+#contacto .mensaje .intro h3 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 0;
+  text-transform: uppercase;
+}
+#contacto .mensaje .input {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 10px 0;
+}
+#contacto .mensaje .input .textarea {
+  height: 200px;
+}
+#contacto .mensaje .input input {
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid rgb(20, 20, 20);
+}
+@media (max-width: 992px) {
+  #contacto .mensaje .input {
+    width: 100%;
+  }
+}
+#contacto .mensaje article {
+  width: 50%;
+}
+#contacto .mensaje article button {
+  background-color: rgb(20, 20, 20);
+  color: rgb(221, 255, 13);
+  border: none;
+  border-radius: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+#contacto .mensaje article button:hover {
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  #contacto .mensaje article {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  #contacto .mensaje {
+    width: 90%;
+  }
+}
 
+#tucarrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #tucarrito section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+@media (max-width: 992px) {
+  #tucarrito section {
+    width: 90%;
+  }
 }
 #tucarrito section .compra {
-  background-color: rgb(29, 29, 29);
+  background-color: rgb(232, 234, 235);
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 #tucarrito section .compra img {
-  width: 30px;
+  width: 35px;
   margin-right: 50px;
+}
+@media (max-width: 992px) {
+  #tucarrito section .compra img {
+    margin: 0;
+  }
 }
 #tucarrito section .compra h3 {
   font-family: "Chakra Petch", sans-serif;
-  color: rgb(232, 234, 235);
+  color: rgb(20, 20, 20);
   font-size: 1.25rem;
   font-weight: 500;
   padding: 0;
 }
+@media (max-width: 992px) {
+  #tucarrito section .compra h3 {
+    margin: 20px 0;
+  }
+}
 #tucarrito section .compra button {
-  background-color: rgb(221, 255, 13);
-  color: rgb(37, 37, 37);
+  background-color: rgb(20, 20, 20);
+  color: rgb(221, 255, 13);
   border: none;
   border-radius: 5px;
   font-family: "Chakra Petch", sans-serif;
@@ -321,6 +547,288 @@ main article section div button:hover {
   margin-left: 50px;
 }
 #tucarrito section .compra button:hover {
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  #tucarrito section .compra button {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 992px) {
+  #tucarrito section .compra {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#tucarrito section .detalles {
+  display: grid;
+  grid-template-areas: "img . . . ." "img pro pre can sub" "img pro2 pre2 can2 sub2" "img . . . .";
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: rgb(232, 234, 235);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles {
+    grid-template-areas: "img img" "pro pro2" "pre pre2" "can can2" "sub sub2";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.05fr 0.05fr 0.05fr 0.05fr;
+    padding: 20px;
+  }
+}
+#tucarrito section .detalles .pro {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+  grid-area: pro;
+  justify-self: center;
+  align-self: center;
+  margin-top: 20px;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles .pro {
+    justify-self: start;
+    margin-top: 20px;
+  }
+}
+#tucarrito section .detalles .pre {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+  grid-area: pre;
+  justify-self: center;
+  align-self: center;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles .pre {
+    justify-self: start;
+    margin-top: 20px;
+  }
+}
+#tucarrito section .detalles .can {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+  grid-area: can;
+  justify-self: center;
+  align-self: center;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles .can {
+    justify-self: start;
+    margin-top: 20px;
+  }
+}
+#tucarrito section .detalles .sub {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+  grid-area: sub;
+  justify-self: center;
+  align-self: center;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles .sub {
+    justify-self: start;
+    margin-top: 20px;
+  }
+}
+#tucarrito section .detalles img {
+  width: 300px;
+  grid-area: img;
+  border-radius: 5px;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles img {
+    width: 50%;
+    justify-self: center;
+  }
+}
+#tucarrito section .detalles .pro2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0;
+  grid-area: pro2;
+  justify-self: center;
+  align-self: center;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles .pro2 {
+    justify-self: end;
+    margin-top: 20px;
+  }
+}
+#tucarrito section .detalles .pre2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0;
+  grid-area: pre2;
+  justify-self: center;
+  align-self: center;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles .pre2 {
+    justify-self: end;
+    margin-top: 20px;
+  }
+}
+#tucarrito section .detalles .can2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0;
+  grid-area: can2;
+  justify-self: center;
+  align-self: center;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles .can2 {
+    justify-self: end;
+    margin-top: 20px;
+  }
+}
+#tucarrito section .detalles .sub2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0;
+  grid-area: sub2;
+  justify-self: center;
+  align-self: center;
+}
+@media (max-width: 992px) {
+  #tucarrito section .detalles .sub2 {
+    justify-self: end;
+    margin-top: 20px;
+  }
+}
+#tucarrito .final {
+  padding: 20px 30px;
+  display: grid;
+  grid-template-areas: "cart cart cart cart cart" "subt subt2 subt2 subt2 subt2" "env env2 env2 env2 env2" "tot tot2 tot2 tot2 tot2" "btn btn btn btn btn";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  background-color: rgb(232, 234, 235);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+#tucarrito .final .cart {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 0;
+  grid-area: cart;
+  justify-self: center;
+  align-self: center;
+}
+#tucarrito .final .subt {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+  grid-area: subt;
+  justify-self: start;
+  align-self: center;
+}
+#tucarrito .final .env {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+  grid-area: env;
+  justify-self: start;
+  align-self: center;
+}
+#tucarrito .final .tot {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0;
+  grid-area: tot;
+  justify-self: start;
+  align-self: center;
+}
+#tucarrito .final .env2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0;
+  grid-area: env2;
+  justify-self: end;
+  align-self: center;
+}
+@media (max-width: 992px) {
+  #tucarrito .final .env2 {
+    width: 80%;
+    text-align: right;
+    flex-wrap: wrap;
+  }
+}
+#tucarrito .final .tot2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0;
+  grid-area: tot2;
+  justify-self: end;
+  align-self: center;
+}
+#tucarrito .final .subt2 {
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0;
+  grid-area: subt2;
+  justify-self: end;
+  align-self: center;
+}
+#tucarrito .final button {
+  background-color: rgb(20, 20, 20);
+  color: rgb(221, 255, 13);
+  border: none;
+  border-radius: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 300px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  grid-area: btn;
+  width: 100%;
+}
+#tucarrito .final button:hover {
   transform: scale(1.02);
   transition: all 1.03s;
   cursor: pointer;
