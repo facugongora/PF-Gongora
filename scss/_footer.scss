@@ -8,7 +8,6 @@ footer{
         padding: 50px;
         h2{
             @include textos ($secondaryColor,$fontMD,$fontBold,0)
-
         }
         h3{
             @include textos ($secondaryColor,$fontS,$fontLight,0)
@@ -27,10 +26,13 @@ footer{
                     font-weight: $fontMD;
                     padding: 0px;
                 }
-                
             }
-            button{
-                @include button ($fontS,$fontNormal,100%, 0,center,center);
+            a{
+                @include button ($fontS,$fontNormal,100%,0,center,center);
+                display: flex;
+                height: 30px;
+                text-align: center;
+                text-decoration: none;
             }
         }
     }
@@ -46,14 +48,14 @@ footer{
                 list-style-type: none;
                 text-decoration: none;
                 display: flex;
+                padding: 0;
                 @media (max-width:992px){
                     flex-direction: column;
                     align-items: center;
                 }
-                }
                 li{
                     margin: 0 50px;
-                    }
+                }
                     a{
                         @include textos ($secondaryColor,$fontS,$fontLight,0);
                         text-decoration: none;
@@ -82,6 +84,17 @@ footer{
                 }
             }
         }
-    
-
-
+        .wsp{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            img{
+                width:50px;
+                &:hover{
+                    transform: scale(1.02);
+                    transition: all 1.03s;
+                    cursor: pointer;
+                }
+            }
+        }
+    }

@@ -27,6 +27,11 @@ nav div a .nav__logo {
 nav div .btnBurguer {
   width: 50px;
 }
+nav div ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 nav div ul li {
   text-decoration: none;
 }
@@ -124,7 +129,7 @@ footer .sectionNewsletter form div label {
   font-weight: 1.25rem;
   padding: 0px;
 }
-footer .sectionNewsletter form button {
+footer .sectionNewsletter form a {
   background-color: rgb(221, 255, 13);
   color: rgb(30, 30, 30);
   border: none;
@@ -136,8 +141,12 @@ footer .sectionNewsletter form button {
   margin: 0;
   justify-content: center;
   align-items: center;
+  display: flex;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
 }
-footer .sectionNewsletter form button:hover {
+footer .sectionNewsletter form a:hover {
   transform: scale(1.02);
   transition: all 1.03s;
   cursor: pointer;
@@ -156,6 +165,7 @@ footer .sectionFooter .pagesFooter .navFooter {
   list-style-type: none;
   text-decoration: none;
   display: flex;
+  padding: 0;
 }
 @media (max-width: 992px) {
   footer .sectionFooter .pagesFooter .navFooter {
@@ -163,10 +173,10 @@ footer .sectionFooter .pagesFooter .navFooter {
     align-items: center;
   }
 }
-footer .sectionFooter .pagesFooter li {
+footer .sectionFooter .pagesFooter .navFooter li {
   margin: 0 50px;
 }
-footer .sectionFooter .pagesFooter a {
+footer .sectionFooter .pagesFooter .navFooter a {
   font-family: "Chakra Petch", sans-serif;
   color: rgb(232, 234, 235);
   font-size: 1rem;
@@ -174,27 +184,39 @@ footer .sectionFooter .pagesFooter a {
   padding: 0;
   text-decoration: none;
 }
-
-.socialsFooter {
+footer .socialsFooter {
   margin: 20px 0 0 0;
 }
-.socialsFooter ul {
+footer .socialsFooter ul {
   display: flex;
   list-style: none;
 }
-.socialsFooter ul li a img {
+footer .socialsFooter ul li a img {
   width: 30px;
   margin: 0 100px;
 }
 @media (max-width: 992px) {
-  .socialsFooter ul li a img {
+  footer .socialsFooter ul li a img {
     margin: 0 50px;
   }
 }
 @media (max-width: 576px) {
-  .socialsFooter ul li a img {
+  footer .socialsFooter ul li a img {
     margin: 0 20px;
   }
+}
+footer .wsp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+footer .wsp img {
+  width: 50px;
+}
+footer .wsp img:hover {
+  transform: scale(1.02);
+  transition: all 1.03s;
+  cursor: pointer;
 }
 
 body {
@@ -242,20 +264,27 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
 }
-#main article section div button {
+#main article section div a {
   font-family: "Chakra Petch", sans-serif;
-  font-weight: 500;
+  color: rgb(30, 30, 30);
   font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-weight: 500;
+  padding: 0;
   background-color: rgb(221, 255, 13);
   color: rgb(30, 30, 30);
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   width: 100%;
 }
-#main article section div button:hover {
+#main article section div a:hover {
   transform: scale(1.02);
   transition: all 1.03s;
   cursor: pointer;
@@ -281,7 +310,7 @@ body {
   font-weight: 500;
   padding: 0;
 }
-#calzado article section div button {
+#calzado article section div a {
   font-family: "Chakra Petch", sans-serif;
   color: rgb(30, 30, 30);
   font-size: 1rem;
@@ -301,7 +330,7 @@ body {
   text-decoration: none;
   width: 100%;
 }
-#calzado article section div button:hover {
+#calzado article section div a:hover {
   transform: scale(1.02);
   transition: all 1.03s;
   cursor: pointer;
@@ -347,18 +376,29 @@ body {
   cursor: pointer;
 }
 
-#nosotros section p {
+#nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#nosotros .nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 50px;
+}
+#nosotros .nosotros p {
   text-align: center;
-  padding: 0 150px;
 }
-@media (max-width: 576px) {
-  #nosotros section p {
-    padding: 0 50px;
-  }
+#nosotros .nosotros .edit {
+  color: rgb(221, 255, 13);
+  font-style: italic;
 }
-@media (max-width: 768px) {
-  #nosotros section p {
-    padding: 0 100px;
+@media (max-width: 992px) {
+  #nosotros .nosotros {
+    width: 90%;
   }
 }
 
@@ -373,19 +413,7 @@ body {
   justify-content: space-between;
   width: 70%;
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  #contacto .datos {
-    margin: 0 50px;
-  }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  #contacto .datos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   #contacto .datos {
     display: flex;
     flex-direction: column;
@@ -398,6 +426,7 @@ body {
   align-items: center;
   justify-content: center;
   list-style: none;
+  padding: 0;
 }
 #contacto .datos article li {
   margin: 10px 0;
@@ -433,6 +462,11 @@ body {
   padding: 0;
   text-transform: uppercase;
 }
+@media (max-width: 992px) {
+  #contacto .mensaje .intro {
+    width: 100%;
+  }
+}
 #contacto .mensaje .input {
   display: flex;
   justify-content: center;
@@ -455,7 +489,7 @@ body {
 #contacto .mensaje article {
   width: 50%;
 }
-#contacto .mensaje article button {
+#contacto .mensaje article a {
   background-color: rgb(20, 20, 20);
   color: rgb(221, 255, 13);
   border: none;
@@ -467,10 +501,12 @@ body {
   margin: 0;
   justify-content: center;
   align-items: center;
+  display: flex;
+  text-decoration: none;
   width: 100%;
-  margin-top: 10px;
+  height: 30px;
 }
-#contacto .mensaje article button:hover {
+#contacto .mensaje article a:hover {
   transform: scale(1.02);
   transition: all 1.03s;
   cursor: pointer;
@@ -532,7 +568,7 @@ body {
     margin: 20px 0;
   }
 }
-#tucarrito section .compra button {
+#tucarrito section .compra a {
   background-color: rgb(20, 20, 20);
   color: rgb(221, 255, 13);
   border: none;
@@ -544,15 +580,19 @@ body {
   margin: 5px;
   justify-content: center;
   align-items: center;
+  display: flex;
   margin-left: 50px;
+  text-decoration: none;
+  width: 25%;
+  height: 30px;
 }
-#tucarrito section .compra button:hover {
+#tucarrito section .compra a:hover {
   transform: scale(1.02);
   transition: all 1.03s;
   cursor: pointer;
 }
 @media (max-width: 992px) {
-  #tucarrito section .compra button {
+  #tucarrito section .compra a {
     width: 100%;
     margin: 0;
   }
@@ -813,7 +853,8 @@ body {
   justify-self: end;
   align-self: center;
 }
-#tucarrito .final button {
+#tucarrito .final .btn-finish {
+  grid-area: btn;
   background-color: rgb(20, 20, 20);
   color: rgb(221, 255, 13);
   border: none;
@@ -821,15 +862,50 @@ body {
   font-family: "Chakra Petch", sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
-  width: 300px;
-  margin: 5px;
+  width: 100%;
+  margin: 0;
   justify-content: center;
   align-items: center;
-  grid-area: btn;
-  width: 100%;
+  text-decoration: none;
+  display: flex;
+  height: 30px;
 }
-#tucarrito .final button:hover {
+#tucarrito .final .btn-finish:hover {
   transform: scale(1.02);
   transition: all 1.03s;
   cursor: pointer;
+}
+@media (max-width: 992px) {
+  #tucarrito .final .btn-finish {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+#error {
+  background-image: url(../img/fondo.webp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#error main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  #error main img {
+    width: 90%;
+  }
+}
+#error main a {
+  text-decoration: none;
+  margin-top: 20px;
+  font-family: "Chakra Petch", sans-serif;
+  color: rgb(221, 255, 13);
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0;
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

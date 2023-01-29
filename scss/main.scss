@@ -47,23 +47,11 @@ body{
                     font-size: $fontXS;
                     font-weight: $fontNormal;
                 }
-                button{
-                    font-family: $mainFont;
-                    font-weight: $fontNormal;
-                    font-size: $fontS;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: $mainColor;
-                    color: $terciaryColor;
-                    border-radius: 5px;
-                    border: none;
+                a{
+                    @include textos ($terciaryColor,$fontS,$fontNormal,0);
+                    @include button ($fontS,$fontNormal,0,0,center,center);
+                    text-decoration: none;
                     width: 100%;
-                    &:hover{
-                        transform: scale(1.02);
-                        transition: all 1.03s;
-                        cursor: pointer;
-                    }
                 }
             }
         }
@@ -84,7 +72,7 @@ body{
                 p{
                     @include textos ($terciaryColor,$fontXS,$fontNormal,0)
                 }
-                button{
+                a{
                     @include textos ($terciaryColor,$fontS,$fontNormal,0);
                     @include button ($fontS,$fontNormal,0,0,center,center);
                     text-decoration: none;
@@ -118,17 +106,25 @@ body{
 
 
 #nosotros{
-    section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .nosotros{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        margin-bottom: 50px;
         p{
             text-align: center;
-            padding: 0 150px;
-            @media (max-width:576px) {
-                padding: 0 50px;
-            }
-            @media (max-width:768px){
-                padding: 0 100px;
-            }
-
+        }
+        .edit{
+            color: $mainColor;
+            font-style: italic;
+        }
+        @media (max-width:992px){
+            width: 90%;
         }
     }
 }
@@ -143,15 +139,7 @@ body{
         align-items: center;
         justify-content: space-between;
         width: 70%;
-        @media (min-width:768px) and (max-width: 992px) {
-            margin: 0 50px;
-        }
-        @media (min-width: 576px) and (max-width: 768px){
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        @media (max-width:576px){
+        @media (max-width:992px){
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -163,6 +151,7 @@ body{
                 align-items: center;
                 justify-content: center;
                 list-style: none;
+                padding: 0;
             }
             li{
                 margin: 10px 0;
@@ -191,6 +180,9 @@ body{
                 @include textos ($quaternaryColor,$fontMD,$fontBold,0);
                 text-transform: uppercase;
             }
+            @media (max-width:992px){
+                width: 100%;
+            }
             
         }
         .input{
@@ -212,10 +204,12 @@ body{
         }
         article{
             width: 50%;
-            button{
+            a{
                 @include secondaryButton ($fontMD,$fontNormal,0,0,center,center);
+                display: flex;
+                text-decoration: none;
                 width: 100%;
-                margin-top: 10px;
+                height: 30px;
             }
             @media (max-width:992px){
                 width: 100%;
@@ -263,9 +257,13 @@ body{
                     margin: 20px 0;
                 }
             }
-            button{
+            a{
                 @include secondaryButton ($fontMD,$fontNormal,300px,5px,center,center);
+                display: flex;
                 margin-left: 50px;
+                text-decoration: none;
+                width: 25%;
+                height: 30px;
 
                 @media (max-width:992px){
                     width: 100%;
@@ -273,6 +271,7 @@ body{
                 }
                 
             }
+            
 
             @media (max-width:992px){
                 flex-direction: column;
@@ -487,10 +486,44 @@ body{
                     align-self: center;
                 
                 }
-                button{
-                    @include secondaryButton($fontMD,$fontNormal,300px,5px,center,center);
+                .btn-finish{
                     grid-area: btn;
-                    width: 100%;
+                    @include secondaryButton ($fontMD,$fontNormal,100%,0,center,center);
+                    text-decoration: none;
+                    display: flex;
+                    height: 30px;
+                    @media (max-width:992px){
+                        width: 100%;
+                        margin: 0;
+                    }
+                    
                 }
         }
     }            
+
+
+#error{
+    background-image: url(../img/fondo.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            @media (max-width:992px){
+                width: 90%;
+            }
+        }
+        a{
+            text-decoration: none;
+            margin-top: 20px;
+            @include textos ($mainColor,$fontMD,$fontLight,0);
+                text-decoration: underline;
+            
+        }
+    }
+}
+
